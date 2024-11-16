@@ -1,0 +1,45 @@
+import SwiftUI
+
+struct SignInView: View {
+    @State private var email: String = ""
+    @State private var password: String = ""
+    @State private var errorMessage: String = ""
+
+    var body: some View {
+        VStack {
+            TextField("Email", text: $email)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+
+            SecureField("Password", text: $password)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+
+            Button(action: signInUser) {
+                Text("Sign In")
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.blue)
+                    .cornerRadius(10)
+            }
+            .padding()
+
+            if !errorMessage.isEmpty {
+                Text(errorMessage)
+                    .foregroundColor(.red)
+            }
+        }
+        .padding()
+    }
+
+    func signInUser() {
+        signIn(email: email, password: password) { result in
+            switch result {
+            case .success(let user):
+                print("User signed in: \(user.email ?? "Unknown Email")")
+            case .failure(let error):
+                errorMessage = error.localizedDescription
+            }
+        }
+    }
+}
