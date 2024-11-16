@@ -1,0 +1,44 @@
+import FirebaseFirestore
+
+// Reference to Firestore
+let db = Firestore.firestore()
+
+// Save User Progress
+func saveUserProgress(userId: String, progress: [String: Any]) {
+    db.collection("users").document(userId).setData(progress) { error in
+        if let error = error {
+            print("Error saving progress: \(error.localizedDescription)")
+        } else {
+            print("Progress successfully saved!")
+        }
+    }
+}
+
+// Fetch User Progress
+func fetchUserProgress(userId: String, completion: @escaping ([String: Any]?) -> Void) {
+    db.collection("users").document(userId).getDocument { document, error in
+        if let document = document, document.exists {
+            completion(document.data())
+        } else {
+            print("Document does not exist or error: \(error?.localizedDescription ?? "")")
+            completion(nil)
+        }
+    }
+}
+
+// Fetch Lessons
+func fetchLessons(completion: @escaping ([Lesson]) -> Void) {
+    db.collection("lessons").getDocuments { snapshot, error in
+        if let error = error {
+            print("Error fetching lessons: \(error.localizedDescription)")
+            completion([])
+            return
+        }
+
+        let lessons = snapshot?.documents.compactMap { doc in
+            try? doc.data(as: Lesson.self)
+        } ?? []
+
+        completion(lessons)
+    }
+}
