@@ -77,8 +77,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Feel free to reach out with any questions or suggestions!
 
-- **Email**: your.email@example.com
-- **GitHub**: [your-username](https://github.com/your-username)
+- **Email**: tannerjeremiah2004@gmail.com and cornellstewart035@gmail.com
 
 ---
 
