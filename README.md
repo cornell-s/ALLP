@@ -11,9 +11,6 @@ Welcome to the **AI Language Learning App**, an iOS-based application designed t
 - **Offline Mode**: Learn on the go without the need for an internet connection.
 - **Multi-Language Support**: Supports multiple languages, including Spanish, French, Mandarin, and Korean!
 
-## Screenshots
-
-*Include screenshots of the app here to give users a preview.*
 
 ## Installation
 
