@@ -1,8 +1,3 @@
-# ALLP
-Here's a sample `README.md` for your AI Language Learning iOS app GitHub repository:
-
----
-
 # AI Language Learning App
 
 Welcome to the **AI Language Learning App**, an iOS-based application designed to enhance language acquisition using artificial intelligence. This app offers personalized language lessons, real-time pronunciation feedback, and progress tracking to make learning a new language both efficient and fun!
