@@ -70,7 +70,3 @@ Distributed under the MIT License. See `LICENSE` for more information.
 Feel free to reach out with any questions or suggestions!
 
 - **Email**: tannerjeremiah2004@gmail.com and cornellstewart035@gmail.com
-
----
-
-This structure provides a comprehensive overview of the app, installation instructions, and ways for others to contribute or contact you. Let me know if you'd like to adjust or add any specific sections!
